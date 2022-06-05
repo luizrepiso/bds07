@@ -9,7 +9,7 @@ type FormData = {
 };
 
 type Information = {
-  avatar_url: string
+  avatar_url: string;
   url: string;
   followers: string;
   location: string;
@@ -66,16 +66,31 @@ const UsersSearch = () => {
         </form>
       </div>
       <div className="row information-container">
-        <h1>Informações</h1>
-        {information && (
+        { information &&
           <>
-            <ResultCard title="" description={information?.avatar_url} />
-            <ResultCard title="Perfil:" description={information?.url} />
-            <ResultCard title="Seguidores:"description={information?.followers}/>
-            <ResultCard title="Localidade:"description={information?.location}/>
-            <ResultCard title="Nome:" description={information?.name} />
+            <div><ResultCard title="Informações" description={""} /> </div>
+            <div>
+              <ResultCard title="Perfil:" description={information.url} />
+            </div>
+            <div>
+              {' '}
+              <ResultCard
+                title="Seguidores:"
+                description={information.followers}
+              />
+            </div>
+            <div>
+              <ResultCard
+                title="Localidade:"
+                description={information.location}
+              />
+            </div>
+            <div>
+              <ResultCard title="Nome:" description={information?.name} />
+            </div>
           </>
-        )}
+}
+        
       </div>
     </div>
   );

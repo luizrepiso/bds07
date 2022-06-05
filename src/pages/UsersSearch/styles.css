@@ -1,33 +1,28 @@
 .users-search-container {
   display: flex;
   flex-direction: column;
-
-  padding: 20px 10px 0 0;
-}
-
-.users-search-container h1 {
-  font-weight: bold;
-  font-size: 38px;
-  color: #262626;
-
-  text-align: left;
-  margin: 50px 0;
+  margin: 30px;
 }
 
 .search-container {
   display: flex;
   align-items: left;
   flex-direction: column;
-  padding: 30px 40px;
+  padding: 10px 10px;
   background-color: #e6f7ff;
   border-radius: 16px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  flex: 1;
 }
 
 .search-container h1 {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
   text-align: left;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -41,9 +36,10 @@
   border-radius: 4px;
   font-size: 16px;
   text-align: center;
-  height: 40px;
-  width: 240px;
-  margin-bottom: 50px;
+  height: 30px;
+  width: 150px;
+  margin-bottom: 30px;
+  border: 3px solid red;
 }
 
 .search-input::placeholder {
@@ -52,10 +48,12 @@
 
 .search-button {
   height: 40px;
-  width: 160px;
+  width: 90px;
+  font-size: 16px;
   margin-bottom: 35px;
   background-color: #1890ff;
   color: #ffffff;
+  padding: 0;
 }
 .search-button a {
   color: rgba(255, 255, 255, 0.5);
@@ -64,21 +62,28 @@
 .information-container {
   border: 3px solid red;
   background: #f5f5f5;
-  width: 100%;
-  max-width: 1140px;
+  width: 872px;
+  height: 40px;
   margin: 0 auto;
   border-radius: 8px;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
 }
-  .information-container h1 {
-    color: #1890FF;
-    font-size: 20px;
-
-
+.information-container h1 {
+  color: #1890ff;
+  font-size: 20px;
 }
 
 @media (min-width: 576px) {
+
+  .search-container {
+    padding-left: 30px;
+  }
   .search-input {
-    width: 480px;
+    height: 40px;
+    width: 298px;
+  }
+  .search-container h1 {
+    font-size: 38px;
   }
 }
