@@ -9,11 +9,15 @@ type FormData = {
 };
 
 type Information = {
-  avatar_url: string;
-  url: string;
+   url: string;
+  html_url: string;
   followers: string;
   location: string;
   name: string;
+  login: string;
+  avatar_url: string;
+ 
+  
 };
 
 const UsersSearch = () => {
@@ -47,8 +51,8 @@ const UsersSearch = () => {
 
   return (
     <div className="users-search-container">
-      <div className="container search-container">
-        <h1 className="search-text">Encontre um perfil Github</h1>
+      <div className="search-container">
+        <h1 className="text-light">Encontre um perfil Github</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-container">
             <input
@@ -65,33 +69,17 @@ const UsersSearch = () => {
           </div>
         </form>
       </div>
-      <div className="row information-container">
-        { information &&
-          <>
-            <div><ResultCard title="Informações" description={""} /> </div>
-            <div>
-              <ResultCard title="Perfil:" description={information.url} />
-            </div>
-            <div>
-              {' '}
-              <ResultCard
-                title="Seguidores:"
-                description={information.followers}
-              />
-            </div>
-            <div>
-              <ResultCard
-                title="Localidade:"
-                description={information.location}
-              />
-            </div>
-            <div>
-              <ResultCard title="Nome:" description={information?.name} />
-            </div>
-          </>
-}
-        
-      </div>
+      {information && (
+        <ResultCard
+          title={information.name}
+          description={information.login}
+          url={information.avatar_url}
+          html_url={information.html_url}
+          followers={information.followers}
+          location={information.location}
+          name={information.name}
+        />
+      )}
     </div>
   );
 };
