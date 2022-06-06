@@ -1,21 +1,22 @@
 .users-search-container {
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .search-container {
   display: flex;
   align-items: left;
   flex-direction: column;
-  padding: 10px 10px;
-  background-color: #e6f7ff;
   border-radius: 16px;
-  flex: 1;
+  width: 100%;
+  margin: 50px 0px 0px 50px;
 }
 
 .search-container h1 {
   font-weight: bold;
+  color: #ffffff;
   font-size: 18px;
   color: black;
   text-align: left;
@@ -39,7 +40,7 @@
   height: 30px;
   width: 150px;
   margin-bottom: 30px;
-  border: 3px solid red;
+  
 }
 
 .search-input::placeholder {
@@ -55,27 +56,9 @@
   color: #ffffff;
   padding: 0;
 }
-.search-button a {
-  color: rgba(255, 255, 255, 0.5);
-}
 
-.information-container {
-  border: 3px solid red;
-  background: #f5f5f5;
-  width: 872px;
-  height: 40px;
-  margin: 0 auto;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-}
-.information-container h1 {
-  color: #1890ff;
-  font-size: 20px;
-}
 
 @media (min-width: 576px) {
-
   .search-container {
     padding-left: 30px;
   }
